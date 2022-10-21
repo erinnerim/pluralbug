@@ -9,7 +9,7 @@
    4. With this virtual environment activated, change to the project directory and execute the ~pluralbug~ command.
    5. Invite the pluralbug user to a matrix room.
 ** Bot Commands
-   Customize the bot commands to your convenience in 
+   Customize the bot commands to your convenience in ~config.yaml~.
    - The default command prefix for pluralbug is ~-p~. This can be changed in ~config.yaml~.
    - "-p sw" for "switch". Example: "-p sw"
      - "-p sw name /path/to/file" switches user and changes pfp simultaneously.

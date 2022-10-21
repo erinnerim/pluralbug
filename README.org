@@ -6,7 +6,7 @@
    1. Create a copy of ~sample.config.yaml~ named ~config.yaml~.
    2. Change the ~user_id~, ~user_password~ and ~homeserver_url~ and other relevant information in ~config.yaml~.
    3. Follow the installation instructions for nio-template as they pertain to this repository. In so doing, creating a python virtual environment.
-   4. With this virtual environment activated, change to the project directory and execute the ~pluralbug~ command.
+   4. With this virtual environment activated, change to the project directory and execute the ~pluralbug_run~ command.
    5. Invite the pluralbug user to a matrix room.
 ** Bot Commands
    Customize the bot commands to your convenience in ~bot_commands.yaml~.

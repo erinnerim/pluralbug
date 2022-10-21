@@ -6,7 +6,7 @@ from typing import Any, List, Optional
 
 import yaml
 
-from my_project_name.errors import ConfigError
+from pluralbug.errors import ConfigError
 
 logger = logging.getLogger()
 logging.getLogger("peewee").setLevel(

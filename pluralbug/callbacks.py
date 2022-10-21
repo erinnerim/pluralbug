@@ -11,11 +11,11 @@ from nio import (
     UnknownEvent,
 )
 
-from my_project_name.bot_commands import Command
-from my_project_name.chat_functions import make_pill, react_to_event, send_text_to_room
-from my_project_name.config import Config
-from my_project_name.message_responses import Message
-from my_project_name.storage import Storage
+from pluralbug.bot_commands import Command
+from pluralbug.chat_functions import make_pill, react_to_event, send_text_to_room
+from pluralbug.config import Config
+from pluralbug.message_responses import Message
+from pluralbug.storage import Storage
 
 logger = logging.getLogger(__name__)
 

@@ -1,8 +1,8 @@
 from nio import AsyncClient, MatrixRoom, RoomMessageText
 
-from my_project_name.chat_functions import react_to_event, send_text_to_room, set_displayname, delete_event, set_pfp
-from my_project_name.config import Config
-from my_project_name.storage import Storage
+from pluralbug.chat_functions import react_to_event, send_text_to_room, set_displayname, delete_event, set_pfp
+from pluralbug.config import Config
+from pluralbug.storage import Storage
 
 
 class Command:
@@ -46,7 +46,7 @@ class Command:
             await self._switch()
         elif self.command.startswith("re"):
             await self._react()
-        elif self.command.startswith("d"):
+        elif self.command.startswith("del"):
             await self._delete()
         elif self.command.startswith("r"):
             await self._replace()

@@ -16,9 +16,9 @@ from nio import (
     UnknownEvent,
 )
 
-from my_project_name.callbacks import Callbacks
-from my_project_name.config import Config
-from my_project_name.storage import Storage
+from pluralbug.callbacks import Callbacks
+from pluralbug.config import Config
+from pluralbug.storage import Storage
 
 logger = logging.getLogger(__name__)
 

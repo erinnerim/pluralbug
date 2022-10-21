@@ -1,4 +1,4 @@
-* Pluralbug: A Pluralkit for Matrix
+* Pluralbug 🐞: A Pluralkit for Matrix
   This project intends to port [[https://pluralkit.me/][pluralkit]] to [[https://matrix.org/][Matrix]]. Pluralbug is a bot that can be invited into a room in Matrix. It keeps track of custom display names and their associated profile images and fronts specified messages with the custom system members information, allowing a system to present and maintain multiple "pseudo-accounts" under one Matrix user.
 ** nio-template
    The implementation of Pluralbug is based on the [[https://github.com/anoadragon453/nio-template][nio-template]] project by github user anoadragon453, which is a template for creating bots with the [[https://github.com/poljar/matrix-nio][matrix-nio]] Matrix client library. Thank you for your contribution to this software. More information on the specifics of implementation can be found in the documentation of that project, and by the [[https://matrix-nio.readthedocs.io/en/latest/#api-documentation][documentation]] for matrix-nio.
@@ -14,7 +14,7 @@
    - "-p sw" for "switch". Example: "-p sw"
      - "-p sw name /path/to/file" switches user and changes pfp simultaneously.
      - "-p sw name" switches user only. Previously updated pfp associated with that user will be changed also. If no image has been set for that user, then the pfp will be default.
-   - "-p re" for "react". Example "-p re 🐞⭐"
+   - "-p re" for "react". Example "-p re ⭐"
    - "-p del" for "delete". Example "-p del <message>" will immediately delete its own message. Used mainly for testing purposes.
    - "-p r" for "replace". This is usually the most common command to be used. Example "-p r <message>" will delete this message and replace it with one sent by pluralbug containing the same text. 
    - "-p help" to display options.

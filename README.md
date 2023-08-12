@@ -44,8 +44,8 @@ All of the following bot commands may be customized to your convenience by modif
 -   "-pb del" for "delete". Example "-pb del <message>" will immediately delete its own message. Used mainly for testing purposes.
 -   "-pb r" for "replace". This is usually the most common command to be used. Example "-pb r <message>" will delete this message and replace it with one sent by pluralbug containing the same text.
 -   "-pb help" to display options.
--   "-pb pfp" to change profile picture. Currently only .png images are accepted. Example:
-    -   "-pb pfp name *path/to/file*" will change the profile picture for the current (pseudo) user.
+-   "-pb pfp" to change profile picture. Example:
+    -   "-pb pfp name /path/to/image.png" will change the profile picture for the current (pseudo) user.
 
 
 ### Notes on Current Limitations and Further Improvements

@@ -1,28 +1,28 @@
 
 # Table of Contents
 
-1.  [Pluralbug 🐞: A Pluralkit for Matrix](#org8418039)
-    1.  [nio-template](#orga34019e)
-    2.  [Setup](#orgb509030)
-        1.  [Notes on Current Limitations and Further Improvements](#orgfe92cba)
-    3.  [Bot Commands](#org7bb6108)
+1.  [Pluralbug 🐞: A Pluralkit for Matrix](#orgebbe9db)
+    1.  [nio-template](#orgff300cc)
+    2.  [Setup](#orgccddbd6)
+    3.  [Bot Commands](#org57fce62)
+        1.  [Notes on Current Limitations and Further Improvements](#orgff08c14)
 
 
-<a id="org8418039"></a>
+<a id="orgebbe9db"></a>
 
 # Pluralbug 🐞: A Pluralkit for Matrix
 
 This project intends to port [pluralkit](https://pluralkit.me/) to [Matrix](https://matrix.org/). Pluralbug is a bot that can be invited into a room in Matrix. It keeps track of custom display names and their associated profile images and fronts specified messages with the custom system members information, allowing a system to present and maintain multiple "pseudo-accounts" under one Matrix user.
 
 
-<a id="orga34019e"></a>
+<a id="orgff300cc"></a>
 
 ## nio-template
 
 The implementation of Pluralbug is based on the [nio-template](https://github.com/anoadragon453/nio-template) project by github user anoadragon453, which is a template for creating bots with the [matrix-nio](https://github.com/poljar/matrix-nio) Matrix client library. Thank you for your contribution to this software. More information on the specifics of implementation can be found in the documentation of that project, and by the [documentation](https://matrix-nio.readthedocs.io/en/latest/#api-documentation) for matrix-nio.
 
 
-<a id="orgb509030"></a>
+<a id="orgccddbd6"></a>
 
 ## Setup
 
@@ -43,7 +43,25 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
 5.  Invite the pluralbug user to a matrix room.
 
 
-<a id="orgfe92cba"></a>
+<a id="org57fce62"></a>
+
+## Bot Commands
+
+All of the following bot commands may be customized to your convenience by modifying `bot_commands.yaml`.
+
+-   The default command prefix for pluralbug is `-pb`. This can be changed in `config.yaml`. It is recommended to change this from the default prefix if you intend to host multiple pluralbugs in one room.
+-   "-pb sw" for "switch".
+    -   "-pb sw name /path/to/file" switches user and changes pfp simultaneously.
+    -   "-pb sw name" switches user only. Previously updated pfp associated with that user will be changed also. If no image has been set for that user, then the pfp will be default.
+-   "-pb re" for "react". Example "-pb re ⭐"
+-   "-pb del" for "delete". Example "-pb del <message>" will immediately delete its own message. Used mainly for testing purposes.
+-   "-pb r" for "replace". This is usually the most common command to be used. Example "-pb r <message>" will delete this message and replace it with one sent by pluralbug containing the same text.
+-   "-pb help" to display options.
+-   "-pb pfp" to change profile picture. Currently only .png images are accepted. Example:
+    -   "-pb pfp name *path/to/file*" will change the profile picture for the current (pseudo) user.
+
+
+<a id="orgff08c14"></a>
 
 ### Notes on Current Limitations and Further Improvements
 
@@ -56,22 +74,4 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
     -   A possible iteration could create a systemd service to run pluralbug as a daemon. One could also run pluralbug on a separate always-on server. If you host your own matrix server, you could theoretically run pluralbug on the same server. But if you have multiple users hosted on your server who wish to use pluralbug, they would also require separate processes for each of them.
         -   Alternatively, mlutiple users in a given room could agree to share the same process. A practical application of this approach would probably require support for multiple command prefixes in a single instance, which pluralbug does not currently support.
 -   If you wish to improve on any of these features, or have ideas for other features or improvements, please send a pull request! Your skills will be greatly appreciated.
-
-
-<a id="org7bb6108"></a>
-
-## Bot Commands
-
-Customize the bot commands to your convenience in `bot_commands.yaml`.
-
--   The default command prefix for pluralbug is `-pb`. This can be changed in `config.yaml`.
--   "-pb sw" for "switch". Example: "-pb sw"
-    -   "-pb sw name /path/to/file" switches user and changes pfp simultaneously.
-    -   "-pb sw name" switches user only. Previously updated pfp associated with that user will be changed also. If no image has been set for that user, then the pfp will be default.
--   "-pb re" for "react". Example "-pb re ⭐"
--   "-pb del" for "delete". Example "-pb del <message>" will immediately delete its own message. Used mainly for testing purposes.
--   "-pb r" for "replace". This is usually the most common command to be used. Example "-pb r <message>" will delete this message and replace it with one sent by pluralbug containing the same text.
--   "-pb help" to display options.
--   "-pb pfp" to change profile picture. Currently only .png images are accepted. Example:
-    -   "-pb pfp name *path/to/file*" will change the profile picture for the current (pseudo) user.
 

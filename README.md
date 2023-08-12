@@ -1,35 +1,35 @@
 
 # Table of Contents
 
-1.  [Pluralbug 🐞: A Pluralkit for Matrix](#org384c162)
-    1.  [nio-template](#org1b6894e)
-    2.  [Setup](#org511c90d)
-        1.  [Notes on Current Limitations and Further Improvements](#org54d5870)
-    3.  [Bot Commands](#org406e84f)
+1.  [Pluralbug 🐞: A Pluralkit for Matrix](#org57531f0)
+    1.  [nio-template](#org1adb03f)
+    2.  [Setup](#org6f845b2)
+        1.  [Notes on Current Limitations and Further Improvements](#org7eda6c9)
+    3.  [Bot Commands](#orgc4e31c0)
 
 
-<a id="org384c162"></a>
+<a id="org57531f0"></a>
 
 # Pluralbug 🐞: A Pluralkit for Matrix
 
 This project intends to port [pluralkit](https://pluralkit.me/) to [Matrix](https://matrix.org/). Pluralbug is a bot that can be invited into a room in Matrix. It keeps track of custom display names and their associated profile images and fronts specified messages with the custom system members information, allowing a system to present and maintain multiple "pseudo-accounts" under one Matrix user.
 
 
-<a id="org1b6894e"></a>
+<a id="org1adb03f"></a>
 
 ## nio-template
 
 The implementation of Pluralbug is based on the [nio-template](https://github.com/anoadragon453/nio-template) project by github user anoadragon453, which is a template for creating bots with the [matrix-nio](https://github.com/poljar/matrix-nio) Matrix client library. Thank you for your contribution to this software. More information on the specifics of implementation can be found in the documentation of that project, and by the [documentation](https://matrix-nio.readthedocs.io/en/latest/#api-documentation) for matrix-nio.
 
 
-<a id="org511c90d"></a>
+<a id="org6f845b2"></a>
 
 ## Setup
 
 1.  Create a copy of `sample.config.yaml` named `config.yaml`.
 2.  Change the `user_id`, `user_password` and `homeserver_url` and other relevant information in `config.yaml`.
     1.  Think of a name for your new pluralbug. For instance, if your username is "alice", you could name your bug "alicebug".
-    2.  Register a new matrix user with that name, e.g. `alicebug` and generate a secure password (you can use the command `./nkey` included in this repository for a randomized 14-digit password). Make sure to register that user on your homeserver, i.e. sign up for a new account with the username and password of your bug.
+    2.  Register a new matrix user with that name, e.g. `alicebug` and generate a secure password (you can use the command `./nkey` included in this repository for a randomized 16-digit password). Make sure to register that user on your homeserver, i.e. sign up for a new account with the username and password of your bug.
     3.  Place those entries in the `user_id`, `user_password` fields of your new `config.yaml` file to those of the userbug instance you just created.
     4.  Change the `homeserver_url` field in your `config.yaml` file to the url of the homeserver on which you are hosting your userbug, e.g. `https://matrix.org` or your own homeserver.
 3.  Follow the installation instructions for nio-template as they pertain to this repository. In so doing, creating a python virtual environment.
@@ -43,7 +43,7 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
 5.  Invite the pluralbug user to a matrix room.
 
 
-<a id="org54d5870"></a>
+<a id="org7eda6c9"></a>
 
 ### Notes on Current Limitations and Further Improvements
 
@@ -58,7 +58,7 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
 -   If you wish to improve on any of these features, or have ideas for other features or improvements, please send a pull request! Your skills will be greatly appreciated.
 
 
-<a id="org406e84f"></a>
+<a id="orgc4e31c0"></a>
 
 ## Bot Commands
 

@@ -1,28 +1,28 @@
 
 # Table of Contents
 
-1.  [Pluralbug 🐞: A Pluralkit for Matrix](#org57531f0)
-    1.  [nio-template](#org1adb03f)
-    2.  [Setup](#org6f845b2)
-        1.  [Notes on Current Limitations and Further Improvements](#org7eda6c9)
-    3.  [Bot Commands](#orgc4e31c0)
+1.  [Pluralbug 🐞: A Pluralkit for Matrix](#org8418039)
+    1.  [nio-template](#orga34019e)
+    2.  [Setup](#orgb509030)
+        1.  [Notes on Current Limitations and Further Improvements](#orgfe92cba)
+    3.  [Bot Commands](#org7bb6108)
 
 
-<a id="org57531f0"></a>
+<a id="org8418039"></a>
 
 # Pluralbug 🐞: A Pluralkit for Matrix
 
 This project intends to port [pluralkit](https://pluralkit.me/) to [Matrix](https://matrix.org/). Pluralbug is a bot that can be invited into a room in Matrix. It keeps track of custom display names and their associated profile images and fronts specified messages with the custom system members information, allowing a system to present and maintain multiple "pseudo-accounts" under one Matrix user.
 
 
-<a id="org1adb03f"></a>
+<a id="orga34019e"></a>
 
 ## nio-template
 
 The implementation of Pluralbug is based on the [nio-template](https://github.com/anoadragon453/nio-template) project by github user anoadragon453, which is a template for creating bots with the [matrix-nio](https://github.com/poljar/matrix-nio) Matrix client library. Thank you for your contribution to this software. More information on the specifics of implementation can be found in the documentation of that project, and by the [documentation](https://matrix-nio.readthedocs.io/en/latest/#api-documentation) for matrix-nio.
 
 
-<a id="org6f845b2"></a>
+<a id="orgb509030"></a>
 
 ## Setup
 
@@ -38,12 +38,12 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
         Note, you may need to install python, pip, and virtualenv in order for this to work.
     3.  `source ./venv/bin/activate` to activate the newly created virtual environment.
         Note, depending on your terminal emulator, this will likely prepend a `(venv)` to your command prompt, so you know the virtual environment is now active.
-    4.  `pip install -e .` to, according to nio-template, "properly install this script into your python environment".
+    4.  (Optional) `pip install -e .` to, according to nio-template, "properly install this script into your python environment". This is not strictly necessary for pluralbug to function, but allows the script to be called more conveniently from CLI.
 4.  With this virtual environment still activated, the execute the `./pluralbug_run` command.
 5.  Invite the pluralbug user to a matrix room.
 
 
-<a id="org7eda6c9"></a>
+<a id="orgfe92cba"></a>
 
 ### Notes on Current Limitations and Further Improvements
 
@@ -58,7 +58,7 @@ The implementation of Pluralbug is based on the [nio-template](https://github.co
 -   If you wish to improve on any of these features, or have ideas for other features or improvements, please send a pull request! Your skills will be greatly appreciated.
 
 
-<a id="orgc4e31c0"></a>
+<a id="org7bb6108"></a>
 
 ## Bot Commands
 
